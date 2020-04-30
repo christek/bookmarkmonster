@@ -3,7 +3,7 @@
 import { connect } from 'react-redux';
 
 import { visibleTagsSelector } from '../selectors';
-import TagsList from '../components/TagsList';
+import TagList from '../components/TagList';
 
 import type { State, Dispatch } from '../types';
 
@@ -26,4 +26,4 @@ const connector = connect(
   mapDispatchToProps
 );
 
-export default connector(TagsList);
+export default connector(TagList);
