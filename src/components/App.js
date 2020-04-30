@@ -2,16 +2,16 @@
 
 import React from 'react';
 
-import AddTodo from '../containers/AddTodo';
+import AddUrl from '../containers/AddUrl';
 import AddTag from '../containers/AddTag';
-import VisibleTodoList from '../containers/VisibleTodoList';
+import VisibleUrlList from '../containers/VisibleUrlList';
 import VisibleTagList from '../containers/VisibleTagList';
 
 const App = () => (
   <div>
-    <AddTodo />
+    <AddUrl />
     <AddTag />
-    <VisibleTodoList />
+    <VisibleUrlList />
     <VisibleTagList />
   </div>
 );

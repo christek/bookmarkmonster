@@ -4,17 +4,17 @@ export type Id = number;
 
 export type Text = string;
 
-export type Todo = {
+export type Url = {
   +id: Id,
   +text: Text,
   +completed: boolean
 };
 
-export type Todos = Array<Todo>;
+export type Urls = Array<Url>;
 
-export type TodosState = {
-  +todos: Todos
+export type UrlsState = {
+  +todos: Urls
 };
 
-export type TodosAction =
+export type UrlsAction =
   | { type: 'ADD_TODO', +id: Id, +text: Text }

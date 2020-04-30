@@ -1,6 +1,6 @@
 // @flow
 
-import { addTodo } from '../actions/todos';
+import { addUrl } from '../actions/todos';
 import todos from './todos';
 
 describe('todos reducer', () => {
@@ -9,7 +9,7 @@ describe('todos reducer', () => {
   });
 
   it('should handle ADD_TODO', () => {
-    expect(todos([], addTodo('Run the tests'))).toEqual([
+    expect(todos([], addUrl('Run the tests'))).toEqual([
       {
         text: 'Run the tests',
         completed: false,
@@ -26,7 +26,7 @@ describe('todos reducer', () => {
             id: 0
           }
         ],
-        addTodo('Use Redux')
+        addUrl('Use Redux')
       )
     ).toEqual([
       {
@@ -55,7 +55,7 @@ describe('todos reducer', () => {
             id: 1
           }
         ],
-        addTodo('Fix the tests')
+        addUrl('Fix the tests')
       )
     ).toEqual([
       {

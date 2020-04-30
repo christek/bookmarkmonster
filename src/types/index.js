@@ -2,7 +2,7 @@
 
 import type { Store as ReduxStore, Dispatch as ReduxDispatch } from 'redux';
 
-import type { TodosState, TodosAction } from './todos';
+import type { UrlsState, UrlsAction } from './todos';
 import type {
   VisibilityFilterState,
   VisibilityFilterAction
@@ -10,9 +10,9 @@ import type {
 
 export type ReduxInitAction = { type: '@@INIT' };
 
-export type State = TodosState & VisibilityFilterState;
+export type State = UrlsState & VisibilityFilterState;
 
-export type Action = ReduxInitAction | TodosAction | VisibilityFilterAction;
+export type Action = ReduxInitAction | UrlsAction | VisibilityFilterAction;
 
 export type Store = ReduxStore<State, Action>;
 

@@ -8,7 +8,7 @@ const todosSelector = (state: State) => state.todos;
 const tagsSelector = (state: State) => state.tags;
 const visibilityFilterSelector = (state: State) => state.visibilityFilter;
 
-export const visibleTodosSelector = createSelector(
+export const visibleUrlsSelector = createSelector(
   todosSelector,
   visibilityFilterSelector,
   (todos, visibilityFilter) => {

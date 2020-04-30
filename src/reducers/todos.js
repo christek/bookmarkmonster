@@ -1,18 +1,18 @@
 // @flow
 
-import type { Todos, Todo, Id, Text } from '../types/todos';
+import type { Urls, Url, Id, Text } from '../types/todos';
 import type { Action } from '../types';
 
-const createTodo = (id: Id, text: Text): Todo => ({
+const createUrl = (id: Id, text: Text): Url => ({
   id,
   text,
   completed: false
 });
 
-const todos = (state: Todos = [], action: Action): Todos => {
+const todos = (state: Urls = [], action: Action): Urls => {
   switch (action.type) {
     case 'ADD_TODO':
-      return [...state, createTodo(action.id, action.text)];
+      return [...state, createUrl(action.id, action.text)];
     default:
       return state;
   }

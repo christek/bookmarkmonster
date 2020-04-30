@@ -4,24 +4,24 @@ import React from 'react';
 import configureStore from 'redux-mock-store';
 import { shallow } from 'enzyme';
 
-import VisibleTodoList from './VisibleTodoList';
+import VisibleUrlList from './VisibleUrlList';
 
 const setup = (setupProps = {}) => {
   const store = configureStore()({
     todos: [
       {
-        text: 'Test AddTodo',
+        text: 'Test AddUrl',
         completed: false,
         id: 0
       },
       {
-        text: 'Test AddTodo',
+        text: 'Test AddUrl',
         completed: true,
         id: 1
       }
     ]
   });
-  const wrapper = shallow(<VisibleTodoList store={store} />);
+  const wrapper = shallow(<VisibleUrlList store={store} />);
 
   return {
     store,
@@ -29,7 +29,7 @@ const setup = (setupProps = {}) => {
   };
 };
 
-describe('VisibleTodoList', () => {
+describe('VisibleUrlList', () => {
   test('renders without crashing', () => {
     const { wrapper } = setup();
     expect(wrapper).toMatchSnapshot();

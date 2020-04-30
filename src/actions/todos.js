@@ -1,13 +1,13 @@
 // @flow
 
-import type { Id, Text, TodosAction } from '../types/todos';
+import type { Id, Text, UrlsAction } from '../types/todos';
 
-let nextTodoId: Id = 0;
+let nextUrlId: Id = 0;
 
-export const addTodo = (text: Text): TodosAction => {
+export const addUrl = (text: Text): UrlsAction => {
   return {
     type: 'ADD_TODO',
-    id: nextTodoId++,
+    id: nextUrlId++,
     text
   };
 };
