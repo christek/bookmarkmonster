@@ -7,7 +7,6 @@ export type Text = string;
 export type Url = {
   +id: Id,
   +text: Text,
-  +completed: boolean
 };
 
 export type Urls = Array<Url>;

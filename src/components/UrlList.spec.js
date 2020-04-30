@@ -32,7 +32,6 @@ describe('UrlList', () => {
       todos: [
         {
           text: 'Test AddUrl',
-          completed: false,
           id: 0
         }
       ]

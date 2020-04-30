@@ -8,7 +8,7 @@ export type Props = {
   text: Text
 };
 
-const Tag = ({ completed, text }: Props) => (
+const Tag = ({ text }: Props) => (
   <li>
     {text}
   </li>

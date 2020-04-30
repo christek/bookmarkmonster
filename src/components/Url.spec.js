@@ -8,14 +8,12 @@ import Url from './Url';
 const setup = (setupProps = {}) => {
   const defaultProps = {
     text: 'Test todo',
-    completed: false,
     onClick: jest.fn()
   };
   const props = { ...defaultProps, ...setupProps };
   const wrapper = shallow(
     <Url
       text={props.text}
-      completed={props.completed}
       onClick={props.onClick}
     />
   );
@@ -29,12 +27,6 @@ const setup = (setupProps = {}) => {
 describe('Url', () => {
   test('renders without crashing', () => {
     const { wrapper } = setup();
-    expect(wrapper).toMatchSnapshot();
-  });
-
-  test('puts a line through text when completed', () => {
-    const { wrapper } = setup({ completed: true });
-
     expect(wrapper).toMatchSnapshot();
   });
 

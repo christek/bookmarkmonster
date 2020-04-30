@@ -11,12 +11,10 @@ const setup = (setupProps = {}) => {
     todos: [
       {
         text: 'Test AddUrl',
-        completed: false,
         id: 0
       },
       {
         text: 'Test AddUrl',
-        completed: true,
         id: 1
       }
     ]

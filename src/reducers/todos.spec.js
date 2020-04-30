@@ -12,7 +12,6 @@ describe('todos reducer', () => {
     expect(todos([], addUrl('Run the tests'))).toEqual([
       {
         text: 'Run the tests',
-        completed: false,
         id: 0
       }
     ]);
@@ -22,7 +21,6 @@ describe('todos reducer', () => {
         [
           {
             text: 'Run the tests',
-            completed: false,
             id: 0
           }
         ],
@@ -31,12 +29,10 @@ describe('todos reducer', () => {
     ).toEqual([
       {
         text: 'Run the tests',
-        completed: false,
         id: 0
       },
       {
         text: 'Use Redux',
-        completed: false,
         id: 1
       }
     ]);
@@ -46,12 +42,10 @@ describe('todos reducer', () => {
         [
           {
             text: 'Run the tests',
-            completed: false,
             id: 0
           },
           {
             text: 'Use Redux',
-            completed: false,
             id: 1
           }
         ],
@@ -60,17 +54,14 @@ describe('todos reducer', () => {
     ).toEqual([
       {
         text: 'Run the tests',
-        completed: false,
         id: 0
       },
       {
         text: 'Use Redux',
-        completed: false,
         id: 1
       },
       {
         text: 'Fix the tests',
-        completed: false,
         id: 2
       }
     ]);
