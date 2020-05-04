@@ -4,38 +4,8 @@ import { createSelector } from 'reselect';
 
 import type { State } from '../types';
 
-const todosSelector = (state: State) => state.todos;
-const tagsSelector = (state: State) => state.tags;
+// TODO: do we really need seperate selectors?
+
+export const todosSelector = (state: State) => state.todos;
+export const tagsSelector = (state: State) => state.tags;
 const visibilityFilterSelector = (state: State) => state.visibilityFilter;
-
-export const visibleUrlsSelector = createSelector(
-  todosSelector,
-  visibilityFilterSelector,
-  (todos, visibilityFilter) => {
-    switch (visibilityFilter) {
-      case 'SHOW_COMPLETED':
-        return todos.filter(t => t.completed);
-      case 'SHOW_ACTIVE':
-        return todos.filter(t => !t.completed);
-      case 'SHOW_ALL':
-      default:
-        return todos;
-    }
-  }
-);
-
-export const visibleTagsSelector = createSelector(
-  tagsSelector,
-  visibilityFilterSelector,
-  (todos, visibilityFilter) => {
-    switch (visibilityFilter) {
-      case 'SHOW_COMPLETED':
-        return todos.filter(t => t.completed);
-      case 'SHOW_ACTIVE':
-        return todos.filter(t => !t.completed);
-      case 'SHOW_ALL':
-      default:
-        return todos;
-    }
-  }
-);

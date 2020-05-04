@@ -11,18 +11,15 @@ export type Props = {
   onUrlClick: (id: Id) => void,
 }
 
-const UrlList = ({ todos, onUrlClick }: Props) => (
+const UrlList = ({ todos, tags, onUrlClick }: Props) => (
   <ul>
     {todos.map((todo) => (
       <div>
         <Url key={todo.id} {...todo} />
         <select>
-          <option value="grapefruit">Grapefruit</option>
-          <option value="lime">Lime</option>
-          <option selected value="coconut">
-            Coconut
-          </option>
-          <option value="mango">Mango</option>
+          {tags.map((tag) => (
+            <option value={tag.text}>{tag.text}</option>
+          ))}
         </select>
       </div>
     ))}

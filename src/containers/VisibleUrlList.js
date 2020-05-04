@@ -2,14 +2,15 @@
 
 import { connect } from 'react-redux';
 
-import { visibleUrlsSelector } from '../selectors';
+import { todosSelector, tagsSelector } from '../selectors';
 import UrlList from '../components/UrlList';
 
 import type { State, Dispatch } from '../types';
 
 const mapStateToProps = (state: State) => {
   return {
-    todos: visibleUrlsSelector(state)
+    todos: todosSelector(state),
+    tags: tagsSelector(state)
   };
 };
 

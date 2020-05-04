@@ -2,14 +2,14 @@
 
 import { connect } from 'react-redux';
 
-import { visibleTagsSelector } from '../selectors';
+import { tagsSelector } from '../selectors';
 import TagList from '../components/TagList';
 
 import type { State, Dispatch } from '../types';
 
 const mapStateToProps = (state: State) => {
   return {
-    tags: visibleTagsSelector(state)
+    tags: tagsSelector(state)
   };
 };
 
