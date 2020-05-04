@@ -6,7 +6,6 @@ import type { Action } from '../types';
 const createUrl = (id: Id, text: Text): Url => ({
   id,
   text,
-  completed: false
 });
 
 const todos = (state: Urls = [], action: Action): Urls => {

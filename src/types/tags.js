@@ -7,7 +7,6 @@ export type Text = string;
 export type Tag = {
   +id: Id,
   +text: Text,
-  +completed: boolean
 };
 
 export type Tags = Array<Tag>;

@@ -6,11 +6,10 @@ import type { Action } from '../types';
 const createTag = (id: Id, text: Text): Tag => ({
   id,
   text,
-  completed: false
 });
 
 const toggleTag = (tags: Tags, id: Id): Tags =>
-  tags.map(t => (t.id !== id ? t : { ...t, completed: !t.completed }));
+  tags.map(t => (t.id !== id ? t : { ...t }));
 
 const tags = (state: Tags = [], action: Action): Tags => {
   switch (action.type) {

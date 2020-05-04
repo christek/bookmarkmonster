@@ -8,11 +8,12 @@ import UrlList from './UrlList';
 const setup = (setupProps = {}) => {
   const defaultProps = {
     todos: [],
+    tags: [],
     onUrlClick: jest.fn()
   };
   const props = { ...defaultProps, ...setupProps };
   const wrapper = shallow(
-    <UrlList todos={props.todos} onUrlClick={props.onUrlClick} />
+    <UrlList todos={props.todos} tags={props.tags} onUrlClick={props.onUrlClick} />
   );
 
   return {

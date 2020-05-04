@@ -1,8 +1,8 @@
 // @flow
 
-// import { visibleUrlsSelector } from './index';
+import { todosSelector } from './index';
 
-xdescribe('visibleUrlsSelector', () => {
+describe('visibleUrlsSelector', () => {
   let state;
   beforeEach(() => {
     state = {
@@ -10,7 +10,16 @@ xdescribe('visibleUrlsSelector', () => {
         { id: 0, text: 'Test Url 1' },
         { id: 1, text: 'Test Url 2' }
       ],
-      visibilityFilter: 'SHOW_ALL'
     };
   });
+
+  test('should handle SHOW_ALL', () => {
+    expect(todosSelector(state)).toEqual([
+      { id: 0, text: 'Test Url 1' },
+      { id: 1, text: 'Test Url 2' }
+    ]);
+  });
+
 });
+
+

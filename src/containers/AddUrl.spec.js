@@ -7,7 +7,7 @@ import { shallow } from 'enzyme';
 import AddUrl from './AddUrl';
 
 const setup = (setupProps = {}) => {
-  const store = configureStore()({ todos: [] });
+  const store = configureStore()({ todos: [], tags: [] });
   const wrapper = shallow(<AddUrl store={store} />);
 
   return {

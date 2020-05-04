@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Url calls onClick when clicked 1`] = `ShallowWrapper {}`;
+
+exports[`Url renders without crashing 1`] = `ShallowWrapper {}`;

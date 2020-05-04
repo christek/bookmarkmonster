@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UrlList renders without crashing 1`] = `ShallowWrapper {}`;
+
+exports[`UrlList with todos renders a list of todos 1`] = `ShallowWrapper {}`;
