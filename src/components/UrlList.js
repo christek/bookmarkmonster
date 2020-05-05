@@ -8,7 +8,6 @@ import type { Urls, Id } from '../types/todos'
 
 export type Props = {
   todos: Urls,
-  onUrlClick: (id: Id) => void,
 }
 
 const UrlList = ({ todos, tags, onUrlClick }: Props) => (
@@ -18,9 +17,10 @@ const UrlList = ({ todos, tags, onUrlClick }: Props) => (
         <Url key={todo.id} {...todo} />
         <select>
           {tags.map((tag) => (
-            <option value={tag.text}>{tag.text}</option>
+            <option value={tag.text}>{tag.text}</option>           
           ))}
         </select>
+        <button>+</button>
       </div>
     ))}
   </ul>
