@@ -14,8 +14,17 @@ const mapStateToProps = (state: State) => {
   };
 };
 
+const mapDispatchToProps = (dispatch: Dispatch) => {
+  return {
+    onUrlClick: id => {
+      console.log('click');
+    }
+  };
+};
+
 const connector = connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 );
 
 export default connector(UrlList);
