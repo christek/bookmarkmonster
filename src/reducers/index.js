@@ -8,6 +8,5 @@ import visibilityFilter from './visibilityFilter';
 
 export default combineReducers({
   todos,
-  tags,
-  visibilityFilter
+  tags
 });
