@@ -29,12 +29,5 @@ describe('Url', () => {
     const { wrapper } = setup();
     expect(wrapper).toMatchSnapshot();
   });
-
-  test('calls onClick when clicked', () => {
-    const { props, wrapper } = setup();
-    expect(wrapper).toMatchSnapshot();
-
-    wrapper.find('li').simulate('click');
-    expect(props.onClick).toHaveBeenCalled();
-  });
+  
 });
