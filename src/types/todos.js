@@ -9,10 +9,17 @@ export type Url = {
   +text: Text,
 };
 
+export type Tag = {
+  +id: Id,
+  +text: Text,
+};
+
 export type Urls = Array<Url>;
+export type Tags = Array<Tag>;
 
 export type UrlsState = {
-  +todos: Urls
+  +todos: Urls,
+  +tags: Tags,
 };
 
 export type UrlsAction =

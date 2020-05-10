@@ -5,14 +5,11 @@ import React from 'react';
 import type { Text } from '../types/todos';
 
 export type Props = {
-  onClick: () => void,
   text: Text
 };
 
-const Todo = ({ onClick, text }: Props) => (
-  <li
-    onClick={onClick}
-  >
+const Todo = ({ text }: Props) => (
+  <li>
     {text}
   </li>
 );
